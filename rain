@@ -1,0 +1,18 @@
+Rain [] drops = new Rain [500];
+
+void setup() {
+  size(1920, 1050);
+  for (int i = 0; i < drops.length; i++) 
+  {
+    drops[i] = new Rain();
+  }
+}
+
+void draw() {
+  background(45, 3, 77);
+
+  for (int i = 0; i < drops.length; i++) {
+    drops[i].update();
+    drops[i].show();
+  }
+}
